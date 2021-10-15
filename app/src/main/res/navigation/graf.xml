@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graf"
+    app:startDestination="@id/kharid">
+
+    <fragment
+        android:id="@+id/kharid"
+        android:name="com.example.tankhah.core.kharid.Kharid"
+        android:label="Kharid" >
+        <action
+            android:id="@+id/action_kharid_to_forosh"
+            app:destination="@id/forosh" />
+    </fragment>
+    <fragment
+        android:id="@+id/forosh"
+        android:name="com.example.tankhah.core.forosh.Forosh"
+        android:label="Forosh" />
+</navigation>

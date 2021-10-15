@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/purple_200"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        >
+        <LinearLayout
+            android:layoutDirection="rtl"
+            android:textDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="فاکتور شماره" />
+                <TextView
+                    android:id="@+id/numberfaktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    tools:text="2" />
+
+                <TextView
+                    android:id="@+id/namefaktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    tools:text="فاکتور فروش" />
+                <TextView
+                    android:id="@+id/monyall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1500000 ریال" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/namrcompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="شرکت آسفالت کلات" />
+                <TextView
+                    android:id="@+id/nameaccunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    tools:text="آقای اجمدرضا جوکار" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1400/06/12" />
+                <TextView
+                    android:id="@+id/data"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="18:41:23" />
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

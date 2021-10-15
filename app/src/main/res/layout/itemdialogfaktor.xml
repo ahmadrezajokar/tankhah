@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:padding="@dimen/_10sdp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="شرح کالا :"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:id="@+id/edit_xplan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تعداد :"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                />
+            <EditText
+                android:id="@+id/edit_number"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قیمت واحد :"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                />
+            <EditText
+                android:id="@+id/edit_mony"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:inputType="numberSigned"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tomanmony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="قیمت واحد :"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قیمت کل‌ :"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/edit_monyall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <Button
+            android:id="@+id/btn_suss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="تایید"
+            android:textColor="@color/black"
+            android:backgroundTint="#12BA19"
+            />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="انصراف"
+            android:textColor="@color/black"
+            android:backgroundTint="#BA1212"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

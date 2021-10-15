@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">tankhah</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">خانه</string>
+    <string name="kharid">خرید</string>
+    <string name="frosh">فروش</string>
+    <string name="submit">صدور فاکتور</string>
+</resources>

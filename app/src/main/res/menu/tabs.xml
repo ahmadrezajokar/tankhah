@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/tab_bread"
+        android:icon="@drawable/ic_baseline_shopping_basket_24"
+        android:title="@string/frosh" />
+    <item
+        android:id="@+id/tab_cart"
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+        android:title="@string/kharid" />
+</menu>

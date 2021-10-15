@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relParent"
+        android:layout_width="match_parent"
+        android:textDirection="rtl"
+        android:layoutDirection="rtl"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sorati"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp">
+
+                <TextView
+                    android:id="@+id/numberfaktors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    tools:text="2" />
+
+                <TextView
+                    android:id="@+id/txt_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    tools:text="فاکتور فروش" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="صورت حساب فروشگاه / شرکت :"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txt_namecompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="کد اقتصادی :"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txtcodegh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="قیمت فاکتور :"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txtmonyallfaktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    tools:textmodelfokh.monyallmodelfokh.monyallSize="@dimen/_10sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:padding="@dimen/_2sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="توسط:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txt_name_faktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="احمدرضاجوکارحصاری" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="تاریخ:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txt_data_faktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="1400/05/16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="ساعت :"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txt_time_faktor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    tools:text="1400/05/16" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crd_numberactiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:cardBackgroundColor="@color/tossi"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:layout_constraintLeft_toRightOf="@id/crd_xplanactiv"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="شماره" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crd_xplanactiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/tossi"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:layout_constraintRight_toLeftOf="@+id/crd_numberactiv"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:layout_constraintLeft_toRightOf="@id/crd_numberxplanactiv"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="شرح کالا" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crd_numberxplanactiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/tossi"
+                        app:layout_constraintRight_toLeftOf="@+id/crd_xplanactiv"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:layout_constraintLeft_toRightOf="@id/crd_monyactiv"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="تعداد" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crd_monyactiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toLeftOf="@+id/crd_numberxplanactiv"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:layout_constraintLeft_toRightOf="@id/crd_monyall_acticity"
+                        app:cardBackgroundColor="@color/tossi"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="قیمت واحد" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/crd_monyall_acticity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toLeftOf="@+id/crd_monyactiv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:cardBackgroundColor="@color/tossi"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="قیمت کل" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/black" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview_faktor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab_add_item_faktor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            tools:ignore="ContentDescription">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_item_faktor_susses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_item_faktor_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+    </RelativeLayout>
+
+</layout>
