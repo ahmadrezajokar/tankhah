@@ -38,6 +38,9 @@ class Forosh(fm:FragmentManager) : BaseFragment<FragmentForoshBinding>(R.layout.
 
 
 
+
+
+
         recyclerView = binding.recycleviewForosh
 
         var linearLayoutManager: LinearLayoutManager
