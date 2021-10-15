@@ -18,10 +18,11 @@ import com.example.tankhah.databinding.FragmentHomeBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import ir.duck.hooshro.setting.BaseFragment
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class Home(fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
-
+    @Inject
     var fm = fm
     var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
     private lateinit var recyclerView: RecyclerView

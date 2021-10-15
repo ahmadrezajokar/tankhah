@@ -13,9 +13,12 @@ import com.example.tankhah.databinding.FragmentForoshBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ir.duck.hooshro.setting.BaseFragment
 import ir.duck.hooshro.setting.SharePref
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class Forosh(fm:FragmentManager) : BaseFragment<FragmentForoshBinding>(R.layout.fragment_forosh) ,getmony{
+
+    @Inject
     var str = "فاکتور فروش"
     var get:Int = 0
     val fm = fm

@@ -15,9 +15,11 @@ import com.example.tankhah.databinding.FragmentKharidBinding
 import dagger.hilt.android.AndroidEntryPoint
 import ir.duck.hooshro.setting.BaseFragment
 import ir.duck.hooshro.setting.SharePref
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class Kharid(fm:FragmentManager) : BaseFragment<FragmentKharidBinding>(com.example.tankhah.R.layout.fragment_kharid) , getmony{
+    @Inject
     var str = "فاکتور خرید"
     var get:Int = 0
     private lateinit var recyclerView:RecyclerView

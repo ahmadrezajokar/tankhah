@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class viewmodelfokh @Inject constructor(context: Context) : ViewModel(){
+open class viewmodelfokh @Inject constructor(context: Context) : ViewModel(){
     var repositoryfokh:repositoryfokh= repositoryfokh(context)
   fun insert(modelfokh: modelfokh){
         viewModelScope.launch(Dispatchers.IO) {
@@ -34,4 +34,6 @@ class viewmodelfokh @Inject constructor(context: Context) : ViewModel(){
                repositoryfokh.update(modelfokh)
         }
     }
+
+
 }
