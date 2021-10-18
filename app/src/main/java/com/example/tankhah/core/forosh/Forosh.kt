@@ -15,16 +15,15 @@ import ir.duck.hooshro.setting.BaseFragment
 import ir.duck.hooshro.setting.SharePref
 import javax.inject.Inject
 
-@AndroidEntryPoint
+
 class Forosh(fm:FragmentManager) : BaseFragment<FragmentForoshBinding>(R.layout.fragment_forosh) ,getmony{
 
-    @Inject
-    var str = "فاکتور فروش"
     var get:Int = 0
     val fm = fm
+    var str = "فاکتور فروش"
     // var frag:FragmentManager = childFragmentManager
     private lateinit var recyclerView:RecyclerView
-    override suspend fun onViewCreated() {
+    override  fun onViewCreated() {
 
         binding.fab.setOnClickListener {
 //            var intent = Intent(context, FaktorActivity::class.java)

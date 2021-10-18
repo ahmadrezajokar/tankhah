@@ -10,7 +10,7 @@ class repasitory(private val context: Context) {
 //    private var ma = MutableLiveData<List<itemfaktormodel>>()
 //    private var list = arrayListOf<itemfaktormodel>()
 //    private val sharePref:SharePref = SharePref(context)
-    private val database = DataBase.invoke(context)
+    private val database = DataBase.getDatabase(context)
     private val userDao = database.dao
 
 //    fun insert() : LiveData<List<itemfaktormodel>> {

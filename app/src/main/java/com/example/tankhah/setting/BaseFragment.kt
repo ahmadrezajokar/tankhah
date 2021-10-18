@@ -20,7 +20,7 @@ abstract class BaseFragment<T : ViewDataBinding>(private val layout: Int) : Frag
         onViewCreated()
     }
 
-    abstract suspend fun onViewCreated ()
+    abstract fun onViewCreated ()
 
 
 }

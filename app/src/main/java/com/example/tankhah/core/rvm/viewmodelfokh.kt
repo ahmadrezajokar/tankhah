@@ -7,12 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.tankhah.core.model.modelfokh
 import com.example.tankhah.core.tan.model
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-open class viewmodelfokh @Inject constructor(context: Context) : ViewModel(){
+open class viewmodelfokh @Inject constructor(@ApplicationContext context: Context) : ViewModel(){
     var repositoryfokh:repositoryfokh= repositoryfokh(context)
   fun insert(modelfokh: modelfokh){
         viewModelScope.launch(Dispatchers.IO) {

@@ -17,14 +17,13 @@ import ir.duck.hooshro.setting.BaseFragment
 import ir.duck.hooshro.setting.SharePref
 import javax.inject.Inject
 
-@AndroidEntryPoint
-class Kharid(fm:FragmentManager) : BaseFragment<FragmentKharidBinding>(com.example.tankhah.R.layout.fragment_kharid) , getmony{
-    @Inject
-    var str = "فاکتور خرید"
+class Kharid @Inject constructor(fm:FragmentManager) : BaseFragment<FragmentKharidBinding>(com.example.tankhah.R.layout.fragment_kharid) , getmony{
+
     var get:Int = 0
     private lateinit var recyclerView:RecyclerView
     val fm = fm
-    override suspend fun onViewCreated() {
+    var str = "فاکتور خرید"
+    override fun onViewCreated() {
         binding.fab.setOnClickListener {
 //            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
 //                .setAction("Action", null)

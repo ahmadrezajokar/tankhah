@@ -1,11 +1,13 @@
 package com.example.tankhah.core.Faktor.view
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tankhah.R
@@ -16,11 +18,12 @@ import com.example.tankhah.core.getmony
 import com.example.tankhah.core.model.modelfokh
 import com.example.tankhah.core.rvm.viewmodelfokh
 import com.example.tankhah.databinding.ItemRecycleviewBinding
+import dagger.hilt.android.qualifiers.ApplicationContext
 import ir.duck.hooshro.setting.SharePref
 import java.lang.Exception
 import com.example.tankhah.core.getdata as getdata
 
-class FaktorActivity() : AppCompatActivity(),getdata{
+class FaktorActivity : AppCompatActivity(),getdata{
 
     private var mony: Int = 0
     var keystr:String = ""
@@ -96,15 +99,17 @@ class FaktorActivity() : AppCompatActivity(),getdata{
 
 
         binding.fabAddItemFaktorSusses.setOnClickListener {
-        //    var s = intent.getStringExtra("number")?.toInt()
-            if (intent.getStringExtra("number")?.indices != null){
-//                var viewmodel:viewmodelfokh = viewmodelfokh(applicationContext)
-//               var  modelfokh:modelfokh = modelfokh()
-//                viewmodel.update(modelfokh)
-             //   Log.e("ahmadreza", "onViewCreated: ${modelfokh.monyall}")
+            var view:viewmodelfokh = viewmodelfokh(applicationContext)
+            var  modelfokh:modelfokh = modelfokh()
+
+            view.get()?.observe(this, Observer {
+                        modelfokh.monyall = binding.txtmonyallfaktor.text.toString().trim()
+                        view.update(modelfokh)
+                        finish()
                 finish()
-            }
-            finish()
+            })
+
+
         }
         binding.fabAddItemFaktorAdd.setOnClickListener {
 

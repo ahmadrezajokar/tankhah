@@ -20,20 +20,19 @@ import dagger.hilt.android.AndroidEntryPoint
 import ir.duck.hooshro.setting.BaseFragment
 import javax.inject.Inject
 
-@AndroidEntryPoint
-class Home(fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
-    @Inject
+
+class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+
     var fm = fm
-    var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
-    private lateinit var recyclerView: RecyclerView
-    override suspend fun onViewCreated() {
+
+    override fun onViewCreated() {
 
 
         binding.fab.setOnClickListener { view ->
             var dialogfokh: dialogfokh = dialogfokh(context?.applicationContext!!,"تنخواه")
             dialogfokh.show(fm,"namehome")
         }
-
+        var recyclerView: RecyclerView
         recyclerView = binding.recycleviewHome
 
         var linearLayoutManager: LinearLayoutManager
@@ -41,7 +40,7 @@ class Home(fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.frag
         linearLayoutManager = LinearLayoutManager(context)
 
         recyclerView.layoutManager = linearLayoutManager
-
+        var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
 
 //        viewmodel?.gethome()?.observe(viewLifecycleOwner, androidx.lifecycle.Observer { list->
 //            var adapter = context?.let { adapter(it, list,fm) }

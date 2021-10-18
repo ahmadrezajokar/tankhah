@@ -54,6 +54,18 @@ import androidx.room.migration.Migration
 //    ).build()
 //}
 
+        companion object {
+            @Volatile private var instance: DataBase? = null
+
+            fun getDatabase(context: Context): DataBase =
+                instance ?: synchronized(this) { instance ?: buildDatabase(context).also { instance = it } }
+
+            private fun buildDatabase(appContext: Context) =
+                Room.databaseBuilder(appContext, DataBase::class.java, "characters")
+                    .fallbackToDestructiveMigration()
+                    .build()
+        }
+
 
 
 }

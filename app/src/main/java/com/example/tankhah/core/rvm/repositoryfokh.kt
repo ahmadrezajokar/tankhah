@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 class repositoryfokh @Inject constructor(private var context: Context){
 
-    var ApplicationModule:ApplicationModule = ApplicationModule()
     var use = ApplicationModule.provideDatabase(context)
     var usedao = use.dao
     fun insert(modelfokh: modelfokh) = usedao?.addfokh(modelfokh)

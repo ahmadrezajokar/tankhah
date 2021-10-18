@@ -7,19 +7,26 @@ import com.example.tankhah.core.database.DataBase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.components.FragmentComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import dagger.multibindings.IntoSet
 import javax.inject.Named
 import javax.inject.Singleton
 
 
 @Module
-@InstallIn(SingletonComponent::class)
-class ApplicationModule {
+@InstallIn(FragmentComponent::class)
+object ApplicationModule {
 
-    @Provides
     @Singleton
-    fun provideDatabase(@ApplicationContext context: Context): DataBase =
-        Room.inMemoryDatabaseBuilder(context, DataBase::class.java
-        ).build()
+    @Provides
+    fun provideDatabase(@ApplicationContext appContext: Context) = DataBase.getDatabase(appContext)
+
+//    @Singleton
+//    fun provideDatabase(@ApplicationContext context: Context): DataBase =
+//        Room.inMemoryDatabaseBuilder(context, DataBase::class.java
+//        ).build()
+
 }

@@ -43,8 +43,9 @@ interface Dao {
      fun getfokh(): LiveData<List<modelfokh>>
 
 
-    @Update(onConflict = OnConflictStrategy.REPLACE)
+    @Update
      fun update(modelfokh: modelfokh)
+
 
 //    @Query(" SELECT * FROM modelfokh WHERE  LIKE '%' || :query || '%' ")
     @Query(" SELECT * FROM modelfokh WHERE  namefaktor LIKE '%' || :query || '%' ")

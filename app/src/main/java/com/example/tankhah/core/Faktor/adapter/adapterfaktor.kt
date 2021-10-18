@@ -113,7 +113,7 @@ class adapterfaktor(private val context:Context, private var fak: List<ItemFakto
         var txtnumber:TextView = itemView.findViewById(R.id.number)
         var txtxplan: TextView = itemView.findViewById(R.id.xplan)
         var txtmony: TextView = itemView.findViewById(R.id.mony)
-        var txtmonyall: TextView = itemView.findViewById(R.id.monyall)
+        var txtmonyall: TextView = itemView.findViewById(R.id.monyallfak)
 
 
 

@@ -5,10 +5,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.tankhah.core.Faktor.model.ItemFaktorModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class viewModel(context: Context) : ViewModel() {
+@HiltViewModel
+class viewModel @Inject constructor(@ApplicationContext context: Context) : ViewModel() {
         var repasitory: repasitory = repasitory(context)
 
          fun insert(ItemFaktorModel: ItemFaktorModel) {

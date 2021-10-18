@@ -318,12 +318,14 @@
                     android:layout_height="@dimen/_1sdp"
                     android:background="@color/black" />
             </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleview_faktor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 />
+
         </LinearLayout>
 
         <com.getbase.floatingactionbutton.FloatingActionsMenu
