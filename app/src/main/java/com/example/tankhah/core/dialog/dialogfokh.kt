@@ -75,7 +75,7 @@ class dialogfokh(context:Context,str:String) : DialogFragment() {
         }
 
         btn_suss.setOnClickListener {
-            if (str == "تنخواه"){
+//            if (str == "تنخواه"){
                 var viewmodel  = context?.let { viewmodelfokh(it.applicationContext) }
 
                 var model: model = model()
@@ -91,34 +91,32 @@ class dialogfokh(context:Context,str:String) : DialogFragment() {
                 viewmodel?.inserthome(model)
 
                 dismiss()
-            }else{
-                var viewmodel  = context?.let { viewmodelfokh(it.applicationContext) }
-
-                var modelfokh: modelfokh = modelfokh()
-
-                // modelfokh.numberfaktor = modelfokh.isuue.toString()
-
-                modelfokh.namefaktor   = str
-
-                modelfokh.namecompany  = name_company.text.toString().trim()
-
-                modelfokh.code_gh = code_egh.text.toString().trim()
-
-                modelfokh.data = data.text.toString().trim()
-
-                modelfokh.time = clock.text.toString().trim()
-
-                modelfokh.nameaccunt = nameaccunt.text.toString().trim()
-
-                viewmodel?.insert(modelfokh)
+//            }else{
+//                var viewmodel  = context?.let { viewmodelfokh(it.applicationContext) }
+//
+//                var modelfokh: modelfokh = modelfokh()
+//
+//                // modelfokh.numberfaktor = modelfokh.isuue.toString()
+//
+//                modelfokh.namefaktor   = str
+//
+//                modelfokh.namecompany  = name_company.text.toString().trim()
+//
+//                modelfokh.code_gh = code_egh.text.toString().trim()
+//
+//                modelfokh.data = data.text.toString().trim()
+//
+//                modelfokh.time = clock.text.toString().trim()
+//
+//                modelfokh.nameaccunt = nameaccunt.text.toString().trim()
+//
+//                viewmodel?.insert(modelfokh)
 
                 //      sharePref.SetTextQustionA(editXplan.text.toString(),editnumber.text.toString(),editmony.text.toString(),editmonyall.text.toString())
 
                 dismiss()
             }
 
-
-        }
 
         return builder.create()
 

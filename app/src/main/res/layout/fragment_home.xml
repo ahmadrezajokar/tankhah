@@ -18,12 +18,23 @@
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleview_home"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent">
+
+            <com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
+                android:id="@+id/recycleviewHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:behind_swiped_item_bg_color="#CE1515"
+                app:behind_swiped_item_bg_color_secondary="#0A3CFA"
+                app:behind_swiped_item_icon="@drawable/ic_baseline_delete_24"
+                app:behind_swiped_item_icon_secondary="@drawable/ic_baseline_check_24"
+                app:behind_swiped_item_icon_margin="@dimen/_200sdp"
+                app:item_layout="@layout/item_tankhah"
+                app:divider="@drawable/list_recycleview"/>
+
+        </FrameLayout>
     </RelativeLayout>
 
 </layout>

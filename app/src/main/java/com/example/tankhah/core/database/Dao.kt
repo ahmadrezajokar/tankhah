@@ -44,7 +44,7 @@ interface Dao {
 
 
     @Update
-     fun update(modelfokh: modelfokh)
+     fun update(modelfokh: modelfokh) : Int
 
 
 //    @Query(" SELECT * FROM modelfokh WHERE  LIKE '%' || :query || '%' ")
@@ -63,4 +63,6 @@ interface Dao {
     @Query(" SELECT * FROM mo ")
      fun gethome(): LiveData<List<model>>
 
+//    @Delete
+//    fun deleteHome(model: model) : Int
 }

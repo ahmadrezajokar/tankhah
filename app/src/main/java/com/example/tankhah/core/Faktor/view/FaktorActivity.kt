@@ -102,12 +102,12 @@ class FaktorActivity : AppCompatActivity(),getdata{
             var view:viewmodelfokh = viewmodelfokh(applicationContext)
             var  modelfokh:modelfokh = modelfokh()
 
-            view.get()?.observe(this, Observer {
-                        modelfokh.monyall = binding.txtmonyallfaktor.text.toString().trim()
-                        view.update(modelfokh)
-                        finish()
-                finish()
-            })
+//            view.get()?.observe(this, Observer {
+//                        modelfokh.monyall = binding.txtmonyallfaktor.text.toString().trim()
+//                        view.update(modelfokh)
+//                        finish()
+//                finish()
+//            })
 
 
         }

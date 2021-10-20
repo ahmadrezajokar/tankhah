@@ -30,11 +30,16 @@ open class viewmodelfokh @Inject constructor(@ApplicationContext context: Contex
 
      fun serach(query:String) : LiveData<List<modelfokh>>? = repositoryfokh.search(query)
 
-     fun update (modelfokh: modelfokh){
+     fun update (modelfokh: modelfokh)  {
         viewModelScope.launch(Dispatchers.IO) {
                repositoryfokh.update(modelfokh)
         }
     }
-
+//
+//    fun deleteHome(model: model) {
+//        viewModelScope.launch(Dispatchers.IO){
+//            repositoryfokh.deleteHome(model)
+//        }
+//    }
 
 }
