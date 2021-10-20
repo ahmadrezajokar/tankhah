@@ -1,0 +1,194 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a1766b0b645ca503921b4c348873671a",
+    "entities": [
+      {
+        "tableName": "mo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `monyallada` TEXT NOT NULL, `txtnamecompany` TEXT NOT NULL, `txtdatafaktor` TEXT NOT NULL, `txttimefaktor` TEXT NOT NULL, `nameaccuntada` TEXT NOT NULL, `txtnumberfaktor` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monyallada",
+            "columnName": "monyallada",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "txtnamecompany",
+            "columnName": "txtnamecompany",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "txtdatafaktor",
+            "columnName": "txtdatafaktor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "txttimefaktor",
+            "columnName": "txttimefaktor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameaccuntada",
+            "columnName": "nameaccuntada",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "txtnumberfaktor",
+            "columnName": "txtnumberfaktor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "itemFaktorModel",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`isuue` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `xplan` TEXT NOT NULL, `number` TEXT NOT NULL, `mony` TEXT NOT NULL, `monyall` INTEGER NOT NULL, `keystr` TEXT NOT NULL, `numberfaktorcode` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "isuue",
+            "columnName": "isuue",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xplan",
+            "columnName": "xplan",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mony",
+            "columnName": "mony",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monyall",
+            "columnName": "monyall",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keystr",
+            "columnName": "keystr",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberfaktorcode",
+            "columnName": "numberfaktorcode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "isuue"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "modelfokh",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namefaktor` TEXT NOT NULL, `numberfaktor` TEXT NOT NULL, `namecompany` TEXT NOT NULL, `nameaccunt` TEXT NOT NULL, `code_gh` TEXT NOT NULL, `data` TEXT NOT NULL, `monyall` TEXT NOT NULL, `time` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "namefaktor",
+            "columnName": "namefaktor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberfaktor",
+            "columnName": "numberfaktor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "namecompany",
+            "columnName": "namecompany",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameaccunt",
+            "columnName": "nameaccunt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code_gh",
+            "columnName": "code_gh",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "data",
+            "columnName": "data",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monyall",
+            "columnName": "monyall",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a1766b0b645ca503921b4c348873671a')"
+    ]
+  }
+}
