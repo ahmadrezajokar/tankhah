@@ -24,12 +24,11 @@ class adapterfaktor(private val context:Context, private var fak: List<ItemFakto
 
 
     override fun onBindViewHolder(holder: viewfinder, position: Int) {
-        var sd = 0
         holder.apply {
             txtissue.text = fak.get(position).isuue.toString()
             txtxplan.text = fak.get(position).xplan
             txtmony.text = fak.get(position).mony
-            sd = fak.get(position).monyall
+            var sd = fak.get(position).monyall
             var finsh =" $sd ریال "
             txtmonyall.text = finsh
             txtnumber.text = fak.get(position).number

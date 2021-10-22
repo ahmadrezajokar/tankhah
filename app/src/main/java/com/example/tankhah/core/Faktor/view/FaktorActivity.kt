@@ -99,8 +99,8 @@ class FaktorActivity : AppCompatActivity(),getdata{
 
 
         binding.fabAddItemFaktorSusses.setOnClickListener {
-            var view:viewmodelfokh = viewmodelfokh(applicationContext)
-            var  modelfokh:modelfokh = modelfokh()
+//            var view:viewmodelfokh = viewmodelfokh(applicationContext)
+//            var  modelfokh:modelfokh = modelfokh()
 
 //            view.get()?.observe(this, Observer {
 //                        modelfokh.monyall = binding.txtmonyallfaktor.text.toString().trim()

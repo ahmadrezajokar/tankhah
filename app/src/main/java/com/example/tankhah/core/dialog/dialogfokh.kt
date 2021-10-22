@@ -31,7 +31,7 @@ class dialogfokh(context:Context,str:String) : DialogFragment() {
 
         builder.setView(view)
 
-        val code_egh:EditText = view.findViewById(R.id.edit_code_egh)
+      //  val code_egh:EditText = view.findViewById(R.id.edit_code_egh)
 
         val name_company:EditText = view.findViewById(R.id.edit_name_company)
 

@@ -35,11 +35,11 @@ open class viewmodelfokh @Inject constructor(@ApplicationContext context: Contex
                repositoryfokh.update(modelfokh)
         }
     }
-//
-//    fun deleteHome(model: model) {
-//        viewModelScope.launch(Dispatchers.IO){
-//            repositoryfokh.deleteHome(model)
-//        }
-//    }
+
+    fun deleteHome(model: model) {
+        viewModelScope.launch(Dispatchers.IO){
+            repositoryfokh.deleteHome(model)
+        }
+    }
 
 }

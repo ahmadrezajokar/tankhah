@@ -61,7 +61,7 @@ class Kharid @Inject constructor(fm:FragmentManager) : BaseFragment<FragmentKhar
 //            var adapter = context?.let { adapterfokh(it, A ) }!!
 //            recyclerView.adapter = adapter
 //        })
-        var sharePref:SharePref = SharePref(context?.applicationContext!!)
+      //  var sharePref:SharePref = SharePref(context?.applicationContext!!)
 //        var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
 //            viewmodel?.serach(str)?.observe(viewLifecycleOwner, androidx.lifecycle.Observer { A->
 //                var adapter = context?.let { adapterfokh(it, A, this ) }!!

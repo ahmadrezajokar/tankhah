@@ -52,7 +52,7 @@ class Forosh(fm:FragmentManager) : BaseFragment<FragmentForoshBinding>(R.layout.
         recyclerView.layoutManager = linearLayoutManager
 
         var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
-        var sharePref: SharePref = SharePref(context?.applicationContext!!)
+//        var sharePref: SharePref = SharePref(context?.applicationContext!!)
 //        var modelfokh: modelfokh = modelfokh()
 //        var s = sharePref.get()
 //        modelfokh.monyall = s.toString()
@@ -60,9 +60,6 @@ class Forosh(fm:FragmentManager) : BaseFragment<FragmentForoshBinding>(R.layout.
             viewmodel?.serach(str)?.observe(viewLifecycleOwner, androidx.lifecycle.Observer { A->
                 var adapter = context?.let { adapterfokh(it, A ,this) }!!
                 recyclerView.adapter = adapter
-                if (sharePref.get() == "1"){
-                    adapter.notifyDataSetChanged()
-                }
             })
 
     }

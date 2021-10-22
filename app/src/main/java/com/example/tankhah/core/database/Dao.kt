@@ -57,12 +57,12 @@ interface Dao {
 //    @Query(" SELECT * FROM modelfokh WHERE id LIKE '%' || :query || '%' ")
 //    fun search(query: String?): LiveData<List<modelfokh>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+     @Insert(onConflict = OnConflictStrategy.REPLACE)
      fun addhome(model:model)
 
-    @Query(" SELECT * FROM mo ")
+     @Query(" SELECT * FROM mo ")
      fun gethome(): LiveData<List<model>>
 
-//    @Delete
-//    fun deleteHome(model: model) : Int
+    @Delete
+    fun deleteHome(model: model) : Int
 }

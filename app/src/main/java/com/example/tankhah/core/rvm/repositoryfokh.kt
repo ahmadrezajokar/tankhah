@@ -17,5 +17,5 @@ class repositoryfokh @Inject constructor(private var context: Context){
     fun gethome() : LiveData<List<model>>? = usedao?.gethome()
     fun search(query:String) : LiveData<List<modelfokh>>? = usedao?.search(query)
     fun update(modelfokh: modelfokh) : Int = usedao!!.update(modelfokh)
-//    fun deleteHome(model: model) : Int = usedao!!.deleteHome(model)
+    fun deleteHome(model: model) : Int = usedao!!.deleteHome(model)
 }

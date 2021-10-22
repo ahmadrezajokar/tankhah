@@ -1,6 +1,7 @@
 package com.example.tankhah.core.tan
 
 import android.content.Context
+import android.graphics.Canvas
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeAdapter
 import com.example.tankhah.R
+import com.example.tankhah.core.rvm.viewmodelfokh
 
 class adapter(private var context:Context,private var list: List<model> = emptyList(), private var f:FragmentManager)
     : DragDropSwipeAdapter<model, adapter.ViewHolder>(list) {
@@ -58,6 +60,15 @@ class adapter(private var context:Context,private var list: List<model> = emptyL
             nameaccuntada.text = list.get(position).nameaccuntada
             monyallada.text = list.get(position).monyallada
         }
+
     }
 
+    override fun onDragStarted(item: model, viewHolder: ViewHolder) {
+      //  var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }!!
+//        var model = item
+//        viewmodel?.deleteHome(model)
+        super.onDragStarted(item, viewHolder)
+
+    }
+    
 }

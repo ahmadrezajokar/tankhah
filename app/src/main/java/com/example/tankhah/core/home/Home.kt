@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
 import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnItemDragListener
 import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnItemSwipeListener
 import com.ernestoyaquello.dragdropswiperecyclerview.listener.OnListScrollListener
@@ -19,9 +20,9 @@ import ir.duck.hooshro.setting.BaseFragment
 class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private var fm = fm
-    private var viewmodel = context?.let { viewmodelfokh(it.applicationContext) }
+    private lateinit var viewmodel:viewmodelfokh
     override fun onViewCreated() {
-
+        viewmodel = context?.let { viewmodelfokh(it.applicationContext) }!!
 
         binding.fab.setOnClickListener { view ->
             var dialogfokh: dialogfokh = dialogfokh(context?.applicationContext!!,"تنخواه")
@@ -36,8 +37,8 @@ class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fra
 
         recyclerView.layoutManager = linearLayoutManager
 
-//
-//        recyclerView.orientation = DragDropSwipeRecyclerView.ListOrientation.VERTICAL_LIST_WITH_VERTICAL_DRAGGING
+
+    recyclerView.orientation = DragDropSwipeRecyclerView.ListOrientation.VERTICAL_LIST_WITH_VERTICAL_DRAGGING
 
 //        recyclerView.behindSwipedItemIconDrawableId = R.drawable.ic_baseline_delete_24
 //        recyclerView.behindSwipedItemIconSecondaryDrawableId = R.drawable.ic_baseline_check_24
@@ -45,7 +46,7 @@ class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fra
 //        recyclerView.disableSwipeDirection(DragDropSwipeRecyclerView.ListOrientation.DirectionFlag.RIGHT)
 //
 
-//        recyclerView.isDuplicateParentStateEnabled = true
+        recyclerView.isDuplicateParentStateEnabled = true
 
         val onItemSwipeListener = object : OnItemSwipeListener<model> {
             override fun onItemSwiped(position: Int, direction: OnItemSwipeListener.SwipeDirection, item: model): Boolean {
@@ -65,19 +66,22 @@ class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fra
         }
         recyclerView.swipeListener = onItemSwipeListener
 
+
+
         val onItemDragListener = object : OnItemDragListener<model> {
             override fun onItemDragged(previousPosition: Int, newPosition: Int, item: model) {
                 Log.e("ahmadreza", "onItemDragged: ${item.id} ")
             }
 
             override fun onItemDropped(initialPosition: Int, finalPosition: Int, item: model) {
-//                var model = item
-//                viewmodel?.deleteHome(model)
+
                 Log.e("ahmadreza", "onItemDropped: ${item.id}" )
             }
         }
 
         recyclerView.dragListener = onItemDragListener
+
+
 
         val onListScrollListener = object : OnListScrollListener {
             override fun onListScrollStateChanged(scrollState: OnListScrollListener.ScrollState) {
@@ -91,7 +95,6 @@ class Home (fm:FragmentManager) : BaseFragment<FragmentHomeBinding>(R.layout.fra
             }
         }
         recyclerView.scrollListener = onListScrollListener
-
 
 
 
